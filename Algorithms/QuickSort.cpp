@@ -29,11 +29,20 @@ void quicksort(int* pArray, int nSize)
 
 		while (nLeftIndex <= nRightIndex)
 		{
-			while (pArray[nLeftIndex] <= pArray[nPivotIndex])
+			while (nLeftIndex < nSize - 1 && pArray[nLeftIndex] <= pArray[nPivotIndex])
 				nLeftIndex++;
 
-			while (pArray[nRightIndex] >= pArray[nPivotIndex])
+			while (nRightIndex > 0 && pArray[nRightIndex] >= pArray[nPivotIndex])
 				nRightIndex--;
+
+			if (nLeftIndex > nRightIndex)
+			{
+				nTemp = pArray[nRightIndex];
+				pArray[nRightIndex] = pArray[nPivotIndex];
+				pArray[nPivotIndex] = nTemp;
+
+				break;
+			}
 
 			nTemp = pArray[nLeftIndex];
 			pArray[nLeftIndex] = pArray[nRightIndex];
