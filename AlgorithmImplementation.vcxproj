@@ -135,11 +135,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="GameMath\Atan2Example.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Algorithms\QuickSort.cpp" />
+    <ClCompile Include="Structures\Vector.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Algorithms\QuickSort.h" />
+    <ClInclude Include="GameMath\Atan2Example.h" />
+    <ClInclude Include="Structures\Vector.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
